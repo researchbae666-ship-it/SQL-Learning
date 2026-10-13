@@ -1,10 +1,14 @@
 # Chapter 02 — Lesson index
 
-Source: [CHAPTER.md](CHAPTER.md)
+Source: [CHAPTER.md](CHAPTER.md) (textbook source retained unchanged)
 
-Lesson files contain the original chapter excerpts and a separate space for faithful tutoring transcripts. All are **planned** until transcripts/assessments are imported; this is not a claim that you have not studied these topics.
+**Chapter status:** IN PROGRESS — not chapter-exam certified; 85% chapter passing threshold.
 
-1. [C02-L01: Add Column(s)](Lessons/01%20-%20Add%20Column(s).md)
-2. [C02-L02: Drop Column](Lessons/02%20-%20Drop%20Column.md)
-3. [C02-L03: Add Constraint](Lessons/03%20-%20Add%20Constraint.md)
-4. [C02-L04: Alter Column](Lessons/04%20-%20Alter%20Column.md)
+| Textbook lesson | Learning evidence | Progress |
+|---|---|---|
+| [C02-L01: Add Column(s)](Lessons/01%20-%20Add%20Column(s).md) | [Our Chapter 2 learning record](Lessons/01%20-%20Add%20Column(s)%20-%20LEARNING%20-%20Chapter%2002.md) | Single-column challenge **10/10 passed**; multiple columns awaiting practice |
+| [C02-L02: Drop Column](Lessons/02%20-%20Drop%20Column.md) | — | Not yet taught in Chapter 2 sequence |
+| [C02-L03: Add Constraint](Lessons/03%20-%20Add%20Constraint.md) | — | Not yet taught in Chapter 2 sequence |
+| [C02-L04: Alter Column](Lessons/04%20-%20Alter%20Column.md) | — | Not yet taught in Chapter 2 sequence |
+
+**Related textbook sections:** `DROP CONSTRAINT` and `ADD PRIMARY KEY` also appear in the chapter reference even though the initial four-lesson division does not give them separate lessons. They must still be addressed before the Chapter 2 mastery exam.
