@@ -5,12 +5,12 @@ status: in_progress
 date_started: 2026-10-13
 sql_target: Microsoft SQL Server 2012
 record_fidelity: teaching summary and verbatim student SQL submission
-assessment_status: single_column_passed_10_of_10_multiple_columns_pending
+assessment_status: single_column_10_of_10_and_multiple_columns_10_of_10
 ---
 
 # Chapter 2 — Lesson 1: Add a new column with ALTER TABLE
 
-**Status: IN PROGRESS — single-column challenge PASSED (10/10); multiple-column practice remains.**
+**Status: COMPLETED for C02-L01 — single-column and multiple-column exercises both PASSED (10/10).**
 
 ## Source
 
@@ -79,14 +79,34 @@ ADD WARD VARCHAR(50) NULL,
 
 Each definition has its own column name, datatype and nullability. The comma separates definitions; use one final semicolon.
 
-**Next challenge (pending):** On an existing `DOCTORS` table, add **two new columns in one ALTER TABLE statement**:
+**Second coding challenge — PASSED (10/10):** On an existing `DOCTORS` table, add **two new columns in one ALTER TABLE statement**:
 - `DEPARTMENT VARCHAR(40) NULL`
 - `ROOMNUMBER INT NULL`
 
-Student query and grade: **not yet submitted**.
+### Student's original SQL (verbatim, 2026-10-13)
+
+```sql
+ALTER TABLE DOCTORS
+ADD DEPARTMENT VARCHAR(40) NULL,
+ROOMNUMBER INT NULL;
+```
+
+### Assistant's line-by-line assessment
+
+**Score: 10/10. Correct for SQL Server 2012.** It is a valid statement, assuming the table exists and neither named column already exists, and assuming no schema restrictions block the operation. Syntax was reviewed; no SQL Server instance was executed.
+
+| Submitted line | Grade | Explanation |
+|---|---|---|
+| `ALTER TABLE DOCTORS` | Correct | Targets the existing table. |
+| `ADD DEPARTMENT VARCHAR(40) NULL,` | Correct | Names the first new nullable text column; comma separates column definitions. |
+| `ROOMNUMBER INT NULL;` | Correct | Names second new nullable integer column; semicolon ends one statement. |
+
+**Additional assistant feedback:** Adding both columns with one `ADD` is correct. The second column's indentation is optional, not an error. Existing rows would be retained and the two newly added nullable columns would initially be `NULL` if executed.
+
+**Outcome:** Both C02-L01 exercises (single column and multiple columns) passed at 10/10. Moved on to textbook C02-L02, Drop Column.
 
 ## Mastery
 
-**In progress:** single-column addition mastered on the coding exercise (10/10), multi-column exercise not yet assessed. Chapter 2 not assessed or certified. The chapter exam is after the chapter's topics are taught and practiced. Passing threshold remains 85%.
+**Lesson C02-L01 completed:** single-column and multi-column addition both assessed at 10/10. Chapter 2 overall is still in progress and has not yet been tested or certified. The chapter exam is after the chapter's topics are taught and practiced. Passing threshold remains 85%.
 
 **Fidelity:** This is a faithful learning-session summary plus the precise exercise specification; it is not represented as an unabridged verbatim export of ChatGPT's message.
