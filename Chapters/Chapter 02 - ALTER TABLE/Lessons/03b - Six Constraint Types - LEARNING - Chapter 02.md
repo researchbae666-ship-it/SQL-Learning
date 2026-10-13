@@ -2,16 +2,16 @@
 chapter: 2
 textbook_lesson: C02-L03
 topic: six_constraint_types
-status: in_progress
+status: completed
 date_started: 2026-10-13
 sql_target: Microsoft SQL Server 2012
-assessment_status: knowledge_checkpoint_pending
-record_fidelity: exact textbook definitions identified; instructor clarifications identified separately; learner answers pending
+assessment_status: knowledge_checkpoint_passed_6_of_6
+record_fidelity: exact textbook definitions identified; instructor clarifications distinguished; actual user answers and grading
 ---
 
 # Chapter 2 — Six Constraint Types
 
-**Status:** All six types taught, knowledge-check answers awaiting submission. **Chapter mastery exam has not yet occurred.**
+**Status:** All six types taught and correctly matched **6/6 (100%)**. **Chapter 2 final mastery exam is assigned but not yet submitted or graded.**
 
 ## Textbook source (Chapter 2: Add Constraint)
 
@@ -50,10 +50,25 @@ The statements above are faithful to the source, which provides **no example cod
 5. Prevent SALARY values below zero.
 6. Prevent two doctors from sharing an EMAIL address, without making EMAIL the table's primary key.
 
-**Learner answers:** Pending.
+## Actual student responses and grading — 2026-10-13
+
+These are the actual selections submitted by the learner, not reconstructed examples.
+
+| Question | Student's exact answer | Grade | Explanation |
+|---|---|---|---|
+| 1. Employee ID as main unique row identifier | `PRIMARY KEY` | 1/1 | Identifies each row uniquely; primary-key columns cannot be NULL. |
+| 2. Require doctor name, never NULL | `NOT NULL` | 1/1 | Prohibits NULLs in that column. |
+| 3. Appointment PATIENTID references patient | `FOREIGN KEY` | 1/1 | Enforces an appropriate relationship to a referenced key. |
+| 4. Set STATUS='ACTIVE' if omitted | `DEFAULT` | 1/1 | Supplies a default when an inserted row omits the column. |
+| 5. Reject SALARY below zero | `CHECK` | 1/1 | Limits allowed values using a condition. |
+| 6. Keep EMAIL unique but not the primary key | `UNIQUE` | 1/1 | Enforces uniqueness without designating a primary key. |
+
+**Score: 6/6 = 100%, PASS.** No mistakes or corrective assignments.
+
+**Assessment scope:** This is a preparatory six-question type-identification check, **not** the Chapter 2 final exam. The final chapter exam is [published here](../../../Assessments/Chapter%2002%20-%20Mastery%20Exam%20-%202026-10-13.md) and is awaiting submission and grading. Its passing threshold is 85%.
 
 **Scoring:** 6/6 to confirm all six have been distinguished; if fewer, review incorrect type(s) only. This is a preparatory knowledge check **separate from the cumulative Chapter 2 exam**, which requires at least 85%.
 
 ## Next step
 
-After the type distinction check is complete, deliver the cumulative SQL Server 2012 Chapter 2 mastery examination (minimum 85%). Do not mark Chapter 2 completed before that assessment is passed.
+The six-type checkpoint has been passed at 6/6. The final cumulative SQL Server 2012 Chapter 2 mastery examination is now published with 10 questions and 40 points; **Chapter 2 remains in progress** until that exam earns at least 34/40 (85%).
