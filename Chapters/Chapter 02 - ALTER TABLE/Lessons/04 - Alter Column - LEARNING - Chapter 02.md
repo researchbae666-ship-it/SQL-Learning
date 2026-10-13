@@ -4,13 +4,13 @@ textbook_lesson: C02-L04
 status: in_progress
 date_started: 2026-10-13
 sql_target: Microsoft SQL Server 2012
-assessment_status: awaiting_student_submission
-record_fidelity: grounded source summary; instructor-authored SQL Server-specific example; no learner submission yet
+assessment_status: first_attempt_3_of_10_correction_pending
+record_fidelity: grounded source summary, instructor-authored example, verbatim learner submission and grade
 ---
 
 # Chapter 2 — Lesson 4: ALTER COLUMN
 
-**Status:** In progress; no student answer yet.
+**Status:** In progress; initial learner answer graded **3/10**, correction required.
 
 ## Original textbook
 
@@ -38,12 +38,40 @@ It allows longer values in the same column while retaining data if the change su
 
 If adding a default is also required, it is a **separate** `ALTER TABLE ... ADD CONSTRAINT ... DEFAULT ... FOR ...` operation, learned earlier.
 
-## Challenge — awaiting student answer
+## Challenge — first attempt assessed
 
 > The DOCTORS table has an existing `SPECIALTY VARCHAR(60) NULL` column. Increase its size to `VARCHAR(100) NULL` without creating a second column or deleting the table. Write one SQL Server 2012 `ALTER TABLE ... ALTER COLUMN` statement. Assume there are no incompatible constraints or indexes on the column.
 
-**Original student SQL:** Pending.
+### Actual learner SQL submitted on 2026-10-13 (verbatim)
 
-**Grade and feedback:** Pending.
+```sql
+ALTER TABLE DOCTORS
+ALTER SPECIALTY VARCHAR(60) NULL,
+UPDATE PECIALTY VARCHAR(100) NULL;
+```
+
+### Assistant's line-by-line grade: **3/10 — correction required**
+
+| Submitted fragment | Assessment | Explanation |
+|---|---|---|
+| `ALTER TABLE DOCTORS` | Correct | Existing target table identified. |
+| `ALTER SPECIALTY VARCHAR(60) NULL` | Incorrect | SQL Server requires `ALTER COLUMN SPECIALTY`; retaining `VARCHAR(60)` would not meet the size increase to 100. |
+| Comma after `NULL` | Incorrect | This task is one `ALTER COLUMN` definition, not comma-separated DDL/DML operations. |
+| `UPDATE PECIALTY` | Incorrect | `UPDATE` modifies row data, not datatype; and `PECIALTY` is missing the initial S. |
+| `VARCHAR(100) NULL` | Partially correct | Required new type and nullability identified, but not in a valid column alteration. |
+| `;` | Correct | Statement ends with a semicolon but overall SQL is not valid T-SQL. |
+
+**Grade rationale:** Partial credit for identifying the correct table and desired final datatype/nullability; substantial deduction for missing `COLUMN`, inappropriate `UPDATE`, invalid comma, wrong old length, and column-name typo. **3/10**, below the lesson's pass requirement.
+
+**Correct syntax shown by assistant (not yet a new student submission):**
+
+```sql
+ALTER TABLE DOCTORS
+ALTER COLUMN SPECIALTY VARCHAR(100) NULL;
+```
+
+The SQL has only been reviewed, not run against a real SQL Server 2012 instance.
+
+**Next step:** Resubmit the corrected statement. Do not advance to ADD PRIMARY KEY or mark this lesson completed before an accurate learner attempt is submitted.
 
 **Coverage caution:** The original Chapter 2 also shows `ADD PRIMARY KEY`, which should be covered before the final Chapter 2 mastery exam. Chapter mastery threshold: 85%.
