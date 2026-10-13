@@ -7,7 +7,8 @@ Source: [CHAPTER.md](CHAPTER.md) (textbook source retained unchanged)
 | Textbook lesson | Learning evidence | Progress |
 |---|---|---|
 | [C02-L01: Add Column(s)](Lessons/01%20-%20Add%20Column(s).md) | [Our Chapter 2 learning record](Lessons/01%20-%20Add%20Column(s)%20-%20LEARNING%20-%20Chapter%2002.md) | Single-column **10/10** and multi-column **10/10**; completed |
-| [C02-L02: Drop Column](Lessons/02%20-%20Drop%20Column.md) | [Our Chapter 2 Drop Column learning record](Lessons/02%20-%20Drop%20Column%20-%20LEARNING%20-%20Chapter%2002.md) | First attempt 8/10 — column spelling correction required |
+| [C02-L02: Drop Column](Lessons/02%20-%20Drop%20Column.md) | [Our Chapter 2 Drop Column learning record](Lessons/02%20-%20Drop%20Column%20-%20LEARNING%20-%20Chapter%2002.md) | First attempt **8/10**, corrected **10/10**; completed |
+| [C02-L02a: Drop Constraint](Lessons/02a%20-%20Drop%20Constraint.md) | [Learning record](Lessons/02a%20-%20Drop%20Constraint%20-%20LEARNING%20-%20Chapter%2002.md) | Introduced; practice awaiting submission |
 | [C02-L03: Add Constraint](Lessons/03%20-%20Add%20Constraint.md) | — | Not yet taught in Chapter 2 sequence |
 | [C02-L04: Alter Column](Lessons/04%20-%20Alter%20Column.md) | — | Not yet taught in Chapter 2 sequence |
 

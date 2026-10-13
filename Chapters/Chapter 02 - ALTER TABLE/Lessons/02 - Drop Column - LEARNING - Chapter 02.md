@@ -1,16 +1,16 @@
 ---
 chapter: 2
 textbook_lesson: C02-L02
-status: in_progress
+status: completed
 date_started: 2026-10-13
 sql_target: Microsoft SQL Server 2012
 record_fidelity: teaching summary and exact submitted SQL
-assessment_status: first_attempt_8_of_10_correction_pending
+assessment_status: first_attempt_8_of_10_correction_10_of_10_completed
 ---
 
 # Chapter 2 — Lesson 2: DROP COLUMN
 
-**Status:** IN PROGRESS — first coding attempt graded **8/10**; correction pending.
+**Status:** COMPLETED — first attempt **8/10**, corrected attempt **10/10**.
 
 ## Textbook material and provenance
 
@@ -66,6 +66,22 @@ DROP COLUMN OLD_EXTENSION;
 
 ### Correction practice
 
-The student is invited to resubmit the statement spelling `OLD_EXTENSION` exactly, rather than advancing prematurely. **No corrected user submission exists yet.**
+The student resubmitted the corrected statement, fixing the spelling. Exact submission (2026-10-13):
+
+```sql
+ALTER TABLE  DOCTORS
+DROP COLUMN OLD_EXTENSION;
+```
+
+### Correction grading — 10/10
+
+- `ALTER TABLE  DOCTORS`: Correct existing table; extra whitespace does not affect syntax.
+- `DROP COLUMN`: Correctly removes the specified column.
+- `OLD_EXTENSION`: Exact required spelling.
+- `;`: Correct final terminator.
+
+**Final result: PASSED (10/10 on correction)**. This is SQL syntax review, not executed against a live database. It would remove the named column and its data if the table and column exist, permissions are sufficient, and no dependent schema objects block the removal.
+
+**Follow-up:** The next source section is `DROP CONSTRAINT`, which removes a table rule without dropping the underlying column.
 
 **Chapter mastery:** Chapter 2 is in progress; 85% pass threshold applies to the final chapter exam.
