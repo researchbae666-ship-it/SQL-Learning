@@ -11,6 +11,8 @@ Source: [CHAPTER.md](CHAPTER.md) (textbook source retained unchanged)
 | [C02-L02a: Drop Constraint](Lessons/02a%20-%20Drop%20Constraint.md) | [Learning record](Lessons/02a%20-%20Drop%20Constraint%20-%20LEARNING%20-%20Chapter%2002.md) | **10/10 passed**; completed |
 | [C02-L03: Add Constraint](Lessons/03%20-%20Add%20Constraint.md) | [Learning record](Lessons/03%20-%20Add%20Constraint%20-%20LEARNING%20-%20Chapter%2002.md) | DEFAULT challenge **10/10 on third attempt**; CHECK and other types pending |
 | [C02-L03a: CHECK constraint](Lessons/03%20-%20Add%20Constraint.md) | [CHECK learning record](Lessons/03a%20-%20CHECK%20Constraint%20-%20LEARNING%20-%20Chapter%2002.md) | **10/10 passed**, completed |
-| [C02-L04: Alter Column](Lessons/04%20-%20Alter%20Column.md) | [Learning record](Lessons/04%20-%20Alter%20Column%20-%20LEARNING%20-%20Chapter%2002.md) | First attempt **3/10** — correction pending |
+| [C02-L04: Alter Column](Lessons/04%20-%20Alter%20Column.md) | [Learning record](Lessons/04%20-%20Alter%20Column%20-%20LEARNING%20-%20Chapter%2002.md) | First attempt **3/10**, corrected **10/10**; completed |
+
+| [C02-L04a: Add Primary Key](Lessons/04a%20-%20Add%20Primary%20Key.md) | [Learning record](Lessons/04a%20-%20Add%20Primary%20Key%20-%20LEARNING%20-%20Chapter%2002.md) | Introduced; coding exercise pending |
 
 **Related textbook sections:** `DROP CONSTRAINT` and `ADD PRIMARY KEY` also appear in the chapter reference even though the initial four-lesson division does not give them separate lessons. They must still be addressed before the Chapter 2 mastery exam.

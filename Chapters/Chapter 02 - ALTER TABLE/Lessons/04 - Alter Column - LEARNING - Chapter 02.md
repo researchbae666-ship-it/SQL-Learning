@@ -1,16 +1,16 @@
 ---
 chapter: 2
 textbook_lesson: C02-L04
-status: in_progress
+status: completed
 date_started: 2026-10-13
 sql_target: Microsoft SQL Server 2012
-assessment_status: first_attempt_3_of_10_correction_pending
+assessment_status: first_attempt_3_of_10_corrected_10_of_10_passed
 record_fidelity: grounded source summary, instructor-authored example, verbatim learner submission and grade
 ---
 
 # Chapter 2 — Lesson 4: ALTER COLUMN
 
-**Status:** In progress; initial learner answer graded **3/10**, correction required.
+**Status:** COMPLETED — first attempt **3/10**, corrected attempt **10/10**.
 
 ## Original textbook
 
@@ -72,6 +72,24 @@ ALTER COLUMN SPECIALTY VARCHAR(100) NULL;
 
 The SQL has only been reviewed, not run against a real SQL Server 2012 instance.
 
-**Next step:** Resubmit the corrected statement. Do not advance to ADD PRIMARY KEY or mark this lesson completed before an accurate learner attempt is submitted.
+## Corrected attempt — 2026-10-13 (user's actual SQL, verbatim)
+
+```sql
+ALTER TABLE DOCTORS
+ALTER COLUMN SPECIALTY VARCHAR(100) NULL;
+```
+
+### Grade: **10/10 — PASS**
+
+| Submitted SQL | Assessment |
+|---|---|
+| `ALTER TABLE DOCTORS` | Correct existing table. |
+| `ALTER COLUMN SPECIALTY` | Correctly targets the existing column for a definition change, not data updates. |
+| `VARCHAR(100)` | Correctly expands declared maximum length from 60 to 100. |
+| `NULL;` | Keeps the column nullable and correctly ends the statement. |
+
+**Outcome:** The user corrected all first-attempt issues; C02-L04 ALTER COLUMN exercise is complete, with 10/10 on the correction. The corrected statement has been reviewed for Microsoft SQL Server 2012 syntax only; it has **not** been executed on an actual database. It assumes the column exists, current data is compatible, and no constraints/indexes block the change.
+
+**Next concept:** Adding a PRIMARY KEY to an existing table as in the closing section of the original Chapter 2. The reference book's named-key syntax is not valid verbatim for SQL Server 2012, so the next lesson explicitly distinguishes source text from SQL Server syntax.
 
 **Coverage caution:** The original Chapter 2 also shows `ADD PRIMARY KEY`, which should be covered before the final Chapter 2 mastery exam. Chapter mastery threshold: 85%.
