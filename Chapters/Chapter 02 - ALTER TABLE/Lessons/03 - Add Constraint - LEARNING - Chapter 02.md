@@ -4,13 +4,13 @@ textbook_lesson: C02-L03
 status: in_progress
 date_started: 2026-10-13
 sql_target: Microsoft SQL Server 2012
-assessment_status: first_attempt_8_of_10_second_attempt_6_of_10_correction_pending
+assessment_status: DEFAULT_passed_third_attempt_10_of_10_CHECK_pending
 record_fidelity: source-grounded lesson summary plus exact user SQL and grading
 ---
 
 # Chapter 2 — Lesson 3: ADD CONSTRAINT (DEFAULT)
 
-**Status:** In progress — first attempt **8/10**, second attempt **6/10**; another correction pending.
+**Status:** DEFAULT constraint subskill **PASSED** on third attempt (10/10); chapter lesson remains in progress for other constraint types.
 
 ## Source excerpt
 
@@ -96,4 +96,29 @@ ALTER TABLE DOCTORS
 ADD CONSTRAINT DF_DOCTORS_SHIFT DEFAULT ('DAY') FOR [SHIFT];
 ```
 
-**Next step:** Resubmit the SQL with `CONSTRAINT` and `DEFAULT` spelled correctly. Do not mark this exercise passed yet. Chapter 2's final chapter mastery exam (85% pass threshold) remains pending.
+## Third attempt — 2026-10-13 (exact user SQL)
+
+```sql
+ALTER TABLE DOCTORS
+ADD CONSTRAINT DF_DOCTORS_SHIFT DEFAULT ('DAY') FOR [SHIFT];
+```
+
+### Third-attempt assessment: **10/10 — PASSED**
+
+| Fragment | Feedback |
+|---|---|
+| `ALTER TABLE DOCTORS` | Correct existing table target. |
+| `ADD CONSTRAINT` | Correct keyword spelling, unlike the second attempt. |
+| `DF_DOCTORS_SHIFT` | Exact required named DEFAULT constraint. |
+| `DEFAULT ('DAY')` | Correct keyword and correctly quoted string literal. |
+| `FOR [SHIFT];` | Correct target column and semicolon; SQL Server brackets valid. |
+
+**Assumptions:** `DOCTORS` and `SHIFT` exist, the constraint name is not already in use, and the user has adequate permissions. This is a **review of T-SQL syntax only**, not execution against a live database.
+
+**Progress across attempts:** First 8/10 (unquoted DAY), second 6/10 (keyword spelling mistakes), third **10/10** (all corrected). The DEFAULT subskill is passed; the full Chapter 2 mastery examination is **not yet attempted** (required threshold 85%).
+
+## Next concept
+
+The book also lists CHECK among the types of constraints. We will next study how a CHECK constraint restricts allowed column values, using the SQL Server 2012 syntax `ADD CONSTRAINT ... CHECK (...)`.
+
+The original book names CHECK as a constraint type but does **not** give a full CHECK syntax example in Chapter 2; our exercises for it are instructor-authored T-SQL examples grounded in that named topic. See [separate CHECK learning record](03a%20-%20CHECK%20Constraint%20-%20LEARNING%20-%20Chapter%2002.md).
