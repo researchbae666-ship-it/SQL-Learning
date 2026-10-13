@@ -4,6 +4,7 @@ A source-grounded SQL study archive, organized by textbook chapter and by the *a
 
 ## Start here
 
+- [Mastery tracker](PROGRESS.md) — verified chapter exam results and next chapter.
 - [64 textbook chapters](Chapters/) — each has an unchanged `CHAPTER.md`.
 - [244 textbook lesson files](Chapters/) — grouped inside each chapter's `Lessons/` folder. Chapter-level `LESSONS.md` files provide lesson indexes.
 - [Learning index: previously studied lessons](LEARNING-INDEX.md) — maps **28 chat lessons** to their related textbook lesson files, with separate `- LEARNING - Chat NN.md` records.
