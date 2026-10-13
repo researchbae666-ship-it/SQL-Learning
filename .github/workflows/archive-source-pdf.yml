@@ -1,0 +1,41 @@
+name: Archive exact source SQL PDF
+
+on:
+  push:
+    paths:
+      - .github/workflows/archive-source-pdf.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download and verify original 221-page SQL source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p Source
+          curl --fail --location --retry 3 --max-time 90 \
+            'https://riptutorial.com/Download/sql.pdf' -o Source/SQL-Original.pdf
+          echo '1640f9cdc53b66c4b6d84231f78787d2bb28f2e2b7e811945ff549da27c60366  Source/SQL-Original.pdf' | sha256sum --check --status || {
+            echo "::error::Publisher PDF differs from the original chat upload. Refusing to add a nonidentical file."
+            sha256sum Source/SQL-Original.pdf
+            exit 1
+          }
+      - name: Commit verified source PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Source/SQL-Original.pdf
+          if ! git diff --staged --quiet; then
+            git commit -m "Add exact source SQL ebook PDF (SHA-256 verified)"
+            git push
+          fi
