@@ -1,11 +1,11 @@
 ---
 chapter: 2
 textbook_lesson: C02-L02a
-status: in_progress
+status: completed
 date_started: 2026-10-13
 sql_target: Microsoft SQL Server 2012
-assessment_status: awaiting_student_submission
-record_fidelity: source-grounded teaching summary; student response pending
+assessment_status: passed_10_of_10
+record_fidelity: source-grounded teaching summary; exact user SQL and grading
 ---
 
 # Chapter 2 — Drop Constraint: Learning Record
@@ -29,12 +29,30 @@ DROP CONSTRAINT DefaultSalary;
 
 In Microsoft SQL Server 2012 the constraint must exist under the specified name, and permissions/dependencies can affect success. Dropping a constraint changes schema validation, not values stored in the column.
 
-## Coding challenge — awaiting learner response
+## Coding challenge — PASSED, 10/10
 
 > The `DOCTORS` table contains an `AGE` column. It also has a CHECK constraint named `CK_DOCTORS_AGE` that restricts the allowed values of AGE. Remove **only the constraint**, keeping the `AGE` column and all doctors' records. Write a single SQL Server 2012 statement using `ALTER TABLE` and `DROP CONSTRAINT`.
 
-**Submitted SQL:** Pending.
+### Exact submitted SQL — 2026-10-13
 
-**Feedback and grade:** Pending.
+```sql
+ALTER TABLE DOCTORS
+DROP CONSTRAINT CK_DOCTORS_AGE;
+```
+
+### Assistant's line-by-line assessment
+
+**Final grade: 10/10 — fully correct for Microsoft SQL Server 2012.**
+
+| SQL portion | Outcome | Reason |
+|---|---|---|
+| `ALTER TABLE DOCTORS` | Correct | Targets the requested existing table. |
+| `DROP CONSTRAINT` | Correct | Removes a named rule, not a column. |
+| `CK_DOCTORS_AGE` | Correct | Exact named CHECK constraint from the prompt. |
+| `;` | Correct | Ends the statement. |
+
+**Outcome:** The command would remove the named constraint while preserving the `AGE` column and existing data, assuming that the constraint exists and the operation succeeds. This was graded by reviewing SQL; it was **not actually executed** in SQL Server.
+
+**Next concept:** `ADD CONSTRAINT`, specifically adding a named DEFAULT constraint, as demonstrated in Chapter 2 of the ebook.
 
 **Chapter status:** In progress. Chapter mastery threshold = 85%.
