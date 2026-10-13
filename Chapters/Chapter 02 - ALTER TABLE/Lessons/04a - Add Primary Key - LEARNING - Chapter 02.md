@@ -4,13 +4,13 @@ textbook_lesson: C02-L04a
 status: in_progress
 date_started: 2026-10-13
 sql_target: Microsoft SQL Server 2012
-assessment_status: awaiting_student_submission
+assessment_status: single_column_pk_10_of_10_composite_pending
 record_fidelity: faithful textbook excerpt with explicit SQL Server 2012 syntax adaptation and teaching summary
 ---
 
 # Chapter 2 — Add Primary Key: Learning Record
 
-**Status: IN PROGRESS** — first coding challenge not yet submitted.
+**Status: Single-column PRIMARY KEY challenge PASSED (10/10); composite primary key exercise pending.**
 
 ## Textbook basis
 
@@ -42,12 +42,27 @@ ADD CONSTRAINT PK_DOCTORS PRIMARY KEY (DOCTORID);
 
 This supposes `DOCTORS` has `DOCTORID INT NOT NULL`, all existing values are unique, and no primary key exists yet.
 
-## Coding challenge — awaiting learner answer
+## Coding challenge — PASSED (10/10)
 
 > Assume `PATIENTS` is an existing table with `PATIENTID INT NOT NULL`. All PATIENTID values are unique, and the table has no primary key yet. Add a named primary key constraint `PK_PATIENTS` on `PATIENTID` using a single SQL Server 2012 `ALTER TABLE` statement. Do not create a new table or column.
 
-**Student SQL:** Pending.
+### Verbatim learner submission (2026-10-13)
 
-**Grade:** Pending.
+```sql
+ALTER TABLE PATIENTS
+ADD CONSTRAINT PK_PATIENTS
+PRIMARY KEY (PATIENTID);
+```
 
-**Next:** If passed, practice composite keys and check any remaining Chapter 2 source topics before the 85%-threshold chapter mastery exam.
+### Grading: **10/10 — PASS**
+
+| Submitted SQL | Feedback |
+|---|---|
+| `ALTER TABLE PATIENTS` | Correct target table. |
+| `ADD CONSTRAINT PK_PATIENTS` | Valid named-constraint syntax for SQL Server 2012. |
+| `PRIMARY KEY (PATIENTID)` | Correct constraint type and existing key column. |
+| `;` | Correct terminator. |
+
+The query has valid SQL Server 2012 syntax provided the existing `PATIENTID` values are unique, not null, and the table has no primary key yet. **No SQL Server database was accessed or modified:** this was graded by inspection.
+
+**Result:** Single-column primary key passed with 10/10 on first attempt. The Chapter 2 mastery exam has not yet occurred. The next practice addresses a multi-column *composite* primary key, explicitly mentioned in the book.
