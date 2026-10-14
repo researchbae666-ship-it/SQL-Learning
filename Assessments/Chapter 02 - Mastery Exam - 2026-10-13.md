@@ -7,13 +7,13 @@ maximum_points: 40
 pass_threshold_percent: 85
 pass_threshold_points: 34
 sql_target: Microsoft SQL Server 2012
-student_answers: 2_of_10_received
+student_answers: 3_of_10_received
 grade: pending
 ---
 
 # Chapter 2 — Cumulative Mastery Examination
 
-**Status: IN PROGRESS; Q1 and Q2 submitted and awaiting deferred grading.** Passing requirement: **34/40 (85%)**.
+**Status: IN PROGRESS; Q1–Q3 submitted and awaiting deferred grading.** Passing requirement: **34/40 (85%)**.
 
 **Source basis:** [Chapter 2 of the archived SQL textbook](../Chapters/Chapter%2002%20-%20ALTER%20TABLE/CHAPTER.md). This is an instructor-authored assessment, not questions copied from the book. The book contains some syntax for other dialects; the exam uses **SQL Server 2012 T-SQL**, as documented in the [Chapter 2 coverage audit](../Chapters/Chapter%2002%20-%20ALTER%20TABLE/COVERAGE-AUDIT.md).
 
@@ -69,7 +69,14 @@ ADD
     BIRTHDATE DATE NULL;
 ```
 
-**Questions Q3–Q10:** Awaiting submission. **All grades are deferred until exam completion.**
+### Q3 — Submitted verbatim
+
+```sql
+ALTER TABLE CLINICS
+DROP COLUMN FAXNUMBER;
+```
+
+**Questions Q4–Q10:** Awaiting submission. **All grades are deferred until exam completion.**
 
 ## Grading and chapter certification
 
