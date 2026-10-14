@@ -1,19 +1,19 @@
 ---
 assessment_id: CH02-MASTERY-2026-10-13
 chapter: 2
-status: assigned_unsubmitted
+status: in_progress
 date_assigned: 2026-10-13
 maximum_points: 40
 pass_threshold_percent: 85
 pass_threshold_points: 34
 sql_target: Microsoft SQL Server 2012
-student_answers: pending
+student_answers: 2_of_10_received
 grade: pending
 ---
 
 # Chapter 2 — Cumulative Mastery Examination
 
-**Status: ASSIGNED; no answers submitted or graded.** Passing requirement: **34/40 (85%)**.
+**Status: IN PROGRESS; Q1 and Q2 submitted and awaiting deferred grading.** Passing requirement: **34/40 (85%)**.
 
 **Source basis:** [Chapter 2 of the archived SQL textbook](../Chapters/Chapter%2002%20-%20ALTER%20TABLE/CHAPTER.md). This is an instructor-authored assessment, not questions copied from the book. The book contains some syntax for other dialects; the exam uses **SQL Server 2012 T-SQL**, as documented in the [Chapter 2 coverage audit](../Chapters/Chapter%2002%20-%20ALTER%20TABLE/COVERAGE-AUDIT.md).
 
@@ -53,7 +53,23 @@ Q1–Q9: 4 points each for correct DDL operation, table/column/constraint names,
 
 ## Actual learner responses
 
-*Not yet received.*
+### Q1 — Submitted verbatim
+
+```sql
+ALTER TABLE NURSES 
+ADD CONTACTEMAIL VARCHAR(80) NULL ;
+```
+
+### Q2 — Submitted verbatim
+
+```sql
+ALTER TABLE EMPLOYEES
+ADD 
+    STARTDATE DATE NOT NULL CONSTRAINT DF_EMPLOYEES_STARTDATE DEFAULT GETDATE(),
+    BIRTHDATE DATE NULL;
+```
+
+**Questions Q3–Q10:** Awaiting submission. **All grades are deferred until exam completion.**
 
 ## Grading and chapter certification
 
